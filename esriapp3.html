@@ -1,58 +1,49 @@
 <!--I think the problem is in line 35...When I hit F12, it said view was not defined....-->
 <html>
-  <head>
-    <title>esriapp</title>
-    <style>
-      html, body, #viewDiv {
-        padding: 0;
-        margin: 0;
-        height: 100%;
-      }
-    </style>
+    <head>
+        <title>esriapp</title>
+        <style>
+          html, body, #viewDiv {
+            padding: 0;
+            margin: 0;
+            height: 100%;
+          }
+        </style>
+        <link rel="stylesheet" href="https://js.arcgis.com/4.10/esri/css/main.css">
+        <script src="https://js.arcgis.com/4.10/"></script>
+        <script type="text/javascript">
+            require(["esri/Map", "esri/views/MapView"], function(Map, MapView) { /*create function with Map and MapView as arguments*/
+                const map = new Map({
+                    basemap: "topo-vector"
+                });
+                const view = new MapView({
+                    container: "viewDiv",
+                    map: map,
+                    zoom: 3,
+                    center: {
+                        longitude: -111.83400,
+                        latitude: 33.29520}, //118.71511,34.09042
+                    });
 
-    <link rel="stylesheet" href="https://js.arcgis.com/4.10/esri/css/main.css">
-    <script src="https://js.arcgis.com/4.10/"></script>
+                view.graphics.add({
+                    symbol: {
+                        type: "simple-marker",
+                        color: "cyan",
+                        },
+                    geometry: {
+                        type: "point",
+                        longitude: 172.981004,
+                        latitude: 1.439969
+                        }
+                    });
+                });
+        </script>
 
-    <script>
-      require([
-        "esri/Map",
-        "esri/views/MapView" /*Calls the esri modules*/
-      ], function(Map, MapView) { /*create function with Map and MapView as arguments*/
+    </head>
+    <body>
+        <div id="viewDiv"></div>
+    </body>
 
-        var map = new Map({
-          basemap: "topo-vector"
-        });
-
-        var view = new MapView({
-          container: "viewDiv",
-          map: map,
-          center: {
-            longitude: -111.83400,
-            latitude: 33.29520}, //118.71511,34.09042
-          zoom: 3
-        });
-      });
-      view.graphics.add({ 
-      symbol: {
-        type: "text",
-        color: "#ff0000",
-        text: "\ue61d", //esri-icon-map-pin
-        font: {
-          size: 30,
-          family: "CalciteWebCoreIcons"
-        }
-      },
-      geometry: {
-        type: "point",
-        longitude: 172.981004,
-        latitude: 1.439969
-      }
-    });
-    </script>
-  </head>
-  <body>
-    <div id="viewDiv"></div>
-  </body>
 </html>
 
 <!--
@@ -70,47 +61,38 @@ Fäggeby, Stora Skedvi, Kopparberg, Sweden [60.4262848,15.7726951];
 -->
 <!--
 *****************************
-
 var Japan = {
   type: "multipoint",
   points: LocationsArray[1]
 };
-
 var India = {
   type: "multipoint",
   points: LocationsArray[2]
 };
-
 var Dubai = {
   type: "multipoint",
   points: LocationsArray[3]
 };
-
 var Petra = {
   type: "multipoint",
   points: LocationsArray[4]
 };
-
 var Gethsemane = {
   type: "multipoint",
   points: LocationsArray[5]
 };
-
 var Denali = {
   type: "multipoint",
   points: LocationsArray[6]
 };
-
 var Sumidero = {
   type: "multipoint",
   points: LocationsArray[7]
 };
-
 var Tanzania = {
   type: "multipoint",
   points: LocationsArray[8]
 };
-
 var Fäggeby = {
   type: "multipoint",
   points: LocationsArray[9]
