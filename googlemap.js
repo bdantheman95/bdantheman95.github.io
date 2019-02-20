@@ -5,6 +5,3 @@ function initMap() {
     zoom: 8
   });
 }
-
-src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyAXS6eLxCWdf31JokswS3GbO582iuY0PqI&callback=initMap"
-async defer
