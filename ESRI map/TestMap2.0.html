@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Brandon's Top 10 Places to Visit! </title>
+    <style>
+    /*This sets the size of the Map div...
+      This is the element that actually contains the map*/
+      #map {
+        height: 100%;
+      }
+    /*This sets the scale of the window*/
+    /*Let's try this without this part first...*/
+      html, body{
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    /*Tried it and it didn't work while I had it commented out...*/
+
+    </style>
+  </head>
+  <body>
+<!-- This is the actual div -->
+    <div id="map"></div>
+<!-- JavaScript portion -->
+
+    <script>
+      var map; //This is the actual map defined as a variable
+      function initMap() { /*Starts the map */
+        map = new google.maps.Map(document.getElementById('map'), {//opens up a new map
+          center: {lat: 33.2948738, lng: -111.7819958}, //where does the map start at
+          zoom: 12 //the zoom
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXS6eLxCWdf31JokswS3GbO582iuY0PqI&callback=initMap"
+    async defer></script>
+  </body>
+</html>
