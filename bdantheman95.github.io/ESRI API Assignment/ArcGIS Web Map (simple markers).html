@@ -1,0 +1,203 @@
+<!--I think the problem is in line 35...When I hit F12, it said view was not defined....-->
+<html>
+    <head>
+        <title>ArcGIS Web Map (simple markers)</title>
+        <style>
+          html, body, #viewDiv {
+            padding: 0;
+            margin: 0;
+            height: 100%;
+          }
+        </style>
+        <link rel="stylesheet" href="https://js.arcgis.com/4.10/esri/css/main.css">
+        <script src="https://js.arcgis.com/4.10/"></script>
+        <script type="text/javascript">
+            require(["esri/Map", "esri/views/MapView"], function(Map, MapView) { /*create function with Map and MapView as arguments*/
+                const map = new Map({
+                    basemap: "topo-vector"
+                });
+                const view = new MapView({
+                    container: "viewDiv",
+                    map: map,
+                    zoom: 3,
+                    center: {
+                        longitude: -111.83400,
+                        latitude: 33.29520}, //118.71511,34.09042
+                    });
+                view.graphics.add({ //Tarawa, Kiribati
+                    symbol: {
+                        type: "simple-marker",
+                        color: "darkred",
+                        },
+                    geometry: {
+                        type: "point",
+                        longitude: 172.981004,
+                        latitude: 1.439969
+                      },
+                    popupTemplate: {
+                      title: "Tarawa, Kiribati",
+                      content: "This is where my brother is currently serving his mission! It is one of the most remote places on earth. The highest point in the whole country (which consists of thousands of islands) is at a whopping elevation of 265.75 ft, which is on Banaba Island. The next highest elevation is on Phoenix Islands, at an elevation of 19.69ft. It is projected that the entire country will be completely submerged by water in about 50 years due to global warming. One mayor bought some land in a different location to provide his people a place to live when their home becomes a literal Atlantis!<br><br><img src=DSCF2113.JPG>"
+                    }
+                    });
+                view.graphics.add({ //Kagoshima, Japan
+                    symbol: {
+                        type: "simple-marker",
+                        color: "red",
+                        },
+                    geometry: {
+                        type: "point",
+                        longitude: 130.555043,
+                        latitude: 31.590717
+                        }
+                    });
+                view.graphics.add({ //Bihar, India  [24.6975517,84.9947815]; #A04000
+                    symbol: {
+                        type: "simple-marker",
+                        color: "#A04000",
+                        },
+                    geometry: {
+                        type: "point",
+                        longitude: 84.9947815,
+                        latitude: 24.6975517
+                        }
+                    });
+                view.graphics.add({ //Dubai, UAE  [25.2048493,55.2707828]; #BA4A00
+                    symbol: {
+                        type: "simple-marker",
+                        color: "#BA4A00",
+                        },
+                    geometry: {
+                        type: "point",
+                        longitude: 55.2707828,
+                        latitude: 25.2048493
+                        }
+                    });
+                view.graphics.add({ //Petra, Jordan [30.3243081,35.4450065]; #D35400
+                    symbol: {
+                        type: "simple-marker",
+                        color: "#D35400",
+                        },
+                    geometry: {
+                        type: "point",
+                        longitude: 35.4450065,
+                        latitude: 30.3243081
+                        }
+                    });
+                view.graphics.add({ //Jerusalem, Israel [31.7797151,35.2303857] #935116
+                    symbol: {
+                        type: "simple-marker",
+                        color: "#935116",
+                        },
+                    geometry: {
+                        type: "point",
+                        longitude: 35.2303857,
+                        latitude: 31.7797151
+                        }
+                    });
+                view.graphics.add({ //Denali, Alaska [63.0441394,-151.4073329] #AF601A
+                    symbol: {
+                        type: "simple-marker",
+                        color: "#AF601A",
+                        },
+                    geometry: {
+                        type: "point",
+                        longitude: -151.4073329,
+                        latitude: 63.0441394
+                        }
+                    });
+                view.graphics.add({ //Chiapas, Mexico [16.8411178,-92.9171735] #B03A2E
+                    symbol: {
+                        type: "simple-marker",
+                        color: "#B03A2E",
+                        },
+                    geometry: {
+                        type: "point",
+                        longitude: -92.9171735,
+                        latitude: 16.8411178
+                        }
+                    });
+                view.graphics.add({ //Robanda, Tanzania [-1.8541654,34.0006702] #CB4335
+                    symbol: {
+                        type: "simple-marker",
+                        color: "#CB4335",
+                        },
+                    geometry: {
+                        type: "point",
+                        longitude: 34.0006702,
+                        latitude: -1.8541654
+                        }
+                    });
+                view.graphics.add({ //Fäggeby, Sweden [60.4262848,15.7726951]; #CA6F1E
+                    symbol: {
+                        type: "simple-marker",
+                        color: "#CA6F1E",
+                        },
+                    geometry: {
+                        type: "point",
+                        longitude: 15.7726951,
+                        latitude: 60.4262848
+                        }
+                    });
+                });
+        </script>
+
+    </head>
+    <body>
+        <div id="viewDiv"></div>
+    </body>
+
+</html>
+
+<!--
+Locations I want to visit:
+Note: [latitude,longitude]
+Tarawa, Kiribati [1.439969, 172.981004];
+Tenmonkan Dori, Kagoshima, Japan [31.590717, 130.555043];
+Mahabodhi Temple, Bodhgaya, Bihar, India  [24.6975517,84.9947815]; #A04000
+Dubai, United Arab Emirates [25.2048493,55.2707828]; #BA4A00
+Petra, Uum Sayhoun, Jordan [30.3243081,35.4450065]; #D35400
+Gethsemane, Jerusalem, Israel [31.7797151,35.2303857]; #935116
+Denali National Park and Reserve, Alaska [63.0441394,-151.4073329]; #AF601A
+Cañón del Sumidero National Park, Chiapas, Mexico [16.8411178,-92.9171735]; #B03A2E
+Serengeti National Park, Robanda, Tanzania [-1.8541654,34.0006702]; #CB4335
+Fäggeby, Stora Skedvi, Kopparberg, Sweden [60.4262848,15.7726951]; #CA6F1E
+-->
+<!--
+*****************************
+var Japan = {
+  type: "multipoint",
+  points: LocationsArray[1]
+};
+var India = {
+  type: "multipoint",
+  points: LocationsArray[2]
+};
+var Dubai = {
+  type: "multipoint",
+  points: LocationsArray[3]
+};
+var Petra = {
+  type: "multipoint",
+  points: LocationsArray[4]
+};
+var Gethsemane = {
+  type: "multipoint",
+  points: LocationsArray[5]
+};
+var Denali = {
+  type: "multipoint",
+  points: LocationsArray[6]
+};
+var Sumidero = {
+  type: "multipoint",
+  points: LocationsArray[7]
+};
+var Tanzania = {
+  type: "multipoint",
+  points: LocationsArray[8]
+};
+var Fäggeby = {
+  type: "multipoint",
+  points: LocationsArray[9]
+};
+</script>
