@@ -1,0 +1,116 @@
+body{
+  background-image: url("https://mymodernmet.com/wp/wp-content/uploads/archive/KRmqPLDVqXx1d5U034zb_1082105200.jpeg");
+  background-size: cover;
+  padding: 5px;
+}
+
+h1 {
+  font-family: 'Cutive Mono', monospace;
+  color: #e0be16;
+  text-shadow: #b76b19 -1px -1px 1px, #b76b19 1px 1px 1px, #b76b19 -1px 1px 1px, #b76b19 1px -1px 1px;
+  text-align: center;
+  font-size: 48px;
+  max-width: 95%;
+}
+
+p{
+  font-family: 'Cutive Mono', monospace;
+  color: #085e16;
+  text-shadow: #0e7c20 -.5px .5px, #0e7c20 -.5px -.5px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 24px;
+  text-align: center;
+  max-width: 85%;
+  color: #085e16;
+}
+
+div{
+  border-style: dashed;
+  border-radius: 10px;
+  border-width: thick;
+  border-color: #0a689b;
+  background-color: rgba(62, 121, 153, .7);
+  max-width: 40%;
+  position: relative;
+}
+
+input{
+/*Font formatting*/
+/*Border and background formatting*/
+  background-color: #3e7999;
+  color: #8c4f25;
+  font-family: 'VT323', monospace;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #aaa;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow:  #75380e -1px 1px,  #75380e -1px -1px;
+  padding: 5px;
+  display: inline-block;
+
+}
+
+input:hover{
+  color: #db8918;
+  background-color: #3e8699;
+}
+
+div.text{
+  font-family: 'VT323', monospace;
+  color: #8c4f25;
+  background-color: rgba(62, 121, 153, .7);
+  font-size: 36px;
+  position: fixed;
+  right: 5%;
+  top: 30%;
+  padding: 15px 20px;
+  margin: 5px;
+  border-style: dashed;
+  border-radius: 10px;
+  border-width: thick;
+  border-color: #0a689b;
+  max-width: 20%;
+  margin-top: auto;
+}
+
+div.datalist{
+  position: absolute;
+  right: 30%;
+}
+
+div h4 {
+  font-family: 'VT323', monospace;
+  text-shadow:  #75380e -1px 1px,  #75380e -1px -1px;
+  text-align: right;
+  font-size: 28px;
+  margin: 10px 10px 10px 15px;
+  color: #8c4f25;
+}
+
+select{
+  color: #8c4f25;
+  text-shadow:  #75380e -1px 1px,  #75380e -1px -1px;
+  background-color: #3e7999;
+  padding: 5px;
+  margin: 5px 10px 10px 10px;
+  position: relative;
+  left: 30px;
+  font-family: 'VT323', monospace;
+  font-size: 24px;
+  font-weight: bolder;
+}
+
+select:hover{
+  color: #db8918;
+  background-color: #3e8699;
+}
+
+font-family: 'Philosopher', sans-serif;
+font-family: 'Changa', sans-serif;
+font-family: 'El Messiri', sans-serif;
+font-family: 'Quantico', sans-serif;
+font-family: 'Arsenal', sans-serif;
+font-family: 'Cutive Mono', monospace;
+font-family: 'Port Lligat Sans', sans-serif;
